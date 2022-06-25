@@ -31,7 +31,7 @@
   {{ with site.Menus.main }}
   <nav class="menu">
     {{ range . }}
-    <a class="{{ if eq .URL $url }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+    <a class="{{ if eq .URL $url }}active{{ end }}" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
     {{ end }}
   </nav>
   {{ end }}<!---->
